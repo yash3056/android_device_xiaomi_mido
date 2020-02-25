@@ -340,6 +340,9 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    qcrild \
+    qcril.db \
+    libril-qc-hal-qmi \
     android.hardware.radio@1.2 \
     android.hardware.radio@1.4 \
     android.hardware.radio.config@1.0 \
