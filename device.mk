@@ -404,4 +404,5 @@ PRODUCT_PACKAGES += \
 # device/qcom/common modules
 TARGET_COMMON_QTI_COMPONENTS := \
     usb \
-    vibrator
+    vibrator \
+    perf
