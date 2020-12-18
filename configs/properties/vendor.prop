@@ -36,6 +36,8 @@ vendor.voice.path.for.pcm.voip=true
 vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
+ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.enable.splita2dp=false
 
 # Audio dynamic feature flags
 vendor.audio.feature.anc_headset.enable=true

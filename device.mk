@@ -20,7 +20,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/configs/overlays/overlay \
-    $(LOCAL_PATH)/configs/overlays/overlay-pa
+    $(LOCAL_PATH)/configs/overlays/overlay-pa \
+    $(LOCAL_PATH)/configs/overlays/overlay-system
 
 # Board Platform
 TARGET_BOARD_PLATFORM := msm8953
@@ -120,8 +121,8 @@ PRODUCT_COPY_FILES += \
 # Audio XML configuration files
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
@@ -131,6 +132,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    BluetoothQti \
+    libbthost_if \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
@@ -149,12 +152,7 @@ PRODUCT_PACKAGES += \
     camera.msm8953 \
     libcamshim \
     libmm-qcamera \
-    libui_shim \
-    Snap
-
-# Component overrides
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+    libui_shim
 
 # Consumerir
 PRODUCT_PACKAGES += \
@@ -413,4 +411,5 @@ PRODUCT_PACKAGES += \
 # device/qcom/common modules
 TARGET_COMMON_QTI_COMPONENTS := \
     usb \
-    perf
+    perf \
+    bt
