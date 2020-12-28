@@ -104,13 +104,6 @@ TARGET_SCREEN_DENSITY := 420
 TARGET_USES_ION := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
-<<<<<<< HEAD
-=======
-TARGET_USES_OVERLAY := true
-
-# UI
-TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS :=  0x2000
->>>>>>> fd9b2c8... mido: kill deprecated/unneeded board flags
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
