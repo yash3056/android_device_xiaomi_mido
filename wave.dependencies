@@ -1,0 +1,22 @@
+[
+  {
+    "repository" : "Wave-Project/kernel_xiaomi_msm8953",
+    "target_path": "device/xiaomi/msm8953"
+    "remote"     : "github"
+  },
+  {
+    "repository" : "yashlearnpython/proprietary_vendor_xiaomi",
+    "target_path": "vendor/xiaomi"
+    "remote"     : "github"
+  },
+  {
+    "repository" : "Wave-Project/device_xiaomi_msm8953-common",
+    "target_path": "vendor/xiaomi/msm8953-common"
+    "remote"     : "github"
+  },
+  {
+    "repository": "yashlearnpython/android_kernel_xiaomi_mido",
+    "target_path": "kernel/xiaomi/mido"
+    "remote"     : "github"
+  }
+]
