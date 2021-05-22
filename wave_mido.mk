@@ -15,16 +15,15 @@
 #
 
 # Inherit from those products. Most specific first.
-# Inherit framework first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from mido device
+$(call inherit-product, device/xiaomi/mido/device.mk)
 
 # Inherit from common WaveOS configuration
 TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, vendor/wave/configs/common.mk)
-
-# Inherit from mido device
-$(call inherit-product, device/xiaomi/mido/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
@@ -46,7 +45,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="$(BUILD_DESCRIPTION)"
-
-# Wave Maintainer name
-PRODUCT_PRODUCT_PROPERTIES += \
-  ro.wave.maintainer=yash \
