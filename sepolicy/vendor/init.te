@@ -11,3 +11,5 @@ allow init firmware_file:filesystem getattr;
 
 # LEDs
 allow init sysfs_leds:lnk_file read;
+
+allow init sysfs:file { setattr  write };
