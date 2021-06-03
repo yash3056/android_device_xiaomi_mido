@@ -35,8 +35,6 @@ TARGET_BOARD_PLATFORM := msm8953
 
 TARGET_BOARD_SUFFIX := _64
 
-# APEX
-TARGET_FLATTEN_APEX := false
 
 # Device Properties
 TARGET_ODM_PROP := $(DEVICE_PATH)/odm.prop
