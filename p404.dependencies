@@ -1,0 +1,13 @@
+[
+ {
+    "repository": "android_kernel_xiaomi_mido",
+    "target_path": "kernel/xiaomi/mido"
+    "remote": "yashlearnpython",
+    "branch": "wave"
+ },
+    "repository": "proprietary_vendor_xiaomi",
+    "target_path": "vendor/xiaomi",
+    "remote": "yashlearnpython",
+    "branch": "lineage-18.1"
+  }
+]

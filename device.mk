@@ -42,8 +42,12 @@ PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/mido-kernel/sdm625/kernel-headers
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    vendor/qcom/opensource/audio-hal \ 
-    hardware/qcom
+    vendor/qcom/opensource/audio-hal \
+    device/qcom/common \
+    hardware/qcom/display \
+    hardware/qcom/media \
+    vendor/qcom/common \
+    vendor/qcom/opensource/audio-hal/primary-hal
 
 # Permissions
 PRODUCT_COPY_FILES += \

@@ -32,6 +32,9 @@ $(call inherit-product, vendor/404/configs/common.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
 $(call inherit-product, vendor/google/gms/config.mk)
 
+# Mido bootanimation flag
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
 PRODUCT_NAME := p404_mido
