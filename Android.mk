@@ -47,13 +47,13 @@ ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK) $(WCNSS_BIN_SYMLINK) $(WCN
 # Just creating it for all cases since it does not hurt.
 FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
 DSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/dsp
-$(FIRMWARE_MOUNT_POINT):
-	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
-	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
+#$(FIRMWARE_MOUNT_POINT):
+#	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
+#	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
 
-$(DSP_MOUNT_POINT):
-	@echo "Creating $(DSP_MOUNT_POINT)"
-	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
+#$(DSP_MOUNT_POINT):
+#	@echo "Creating $(DSP_MOUNT_POINT)"
+#	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT)
 
