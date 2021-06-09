@@ -385,8 +385,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl:64 \
-    android.hardware.thermal@1.0-service
+    android.hardware.thermal@2.0-service.qti
 
 # Touch features
 PRODUCT_PACKAGES += \
