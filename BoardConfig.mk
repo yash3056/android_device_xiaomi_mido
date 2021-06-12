@@ -42,6 +42,9 @@ TARGET_SYSTEM_EXT_PROP := $(DEVICE_PATH)/system_ext.prop
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP := $(DEVICE_PATH)/vendor.prop
 
+#Gapps
+WITH_GAPPS := true
+
 # Kernel
 TARGET_KERNEL_CONFIG := mido_defconfig
 BOARD_KERNEL_BASE := 0x80000000
