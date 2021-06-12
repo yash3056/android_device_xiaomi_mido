@@ -21,9 +21,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common Cygnus stuff.
-$(call inherit-product, vendor/cygnus/configs/common_full_phone.mk)
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
 PRODUCT_NAME := cygnus_mido
