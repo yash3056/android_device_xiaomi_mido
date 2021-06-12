@@ -33,6 +33,10 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 TARGET_BOARD_SUFFIX := _64
 
+#TEMP
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 # Device Properties
 TARGET_ODM_PROP := $(DEVICE_PATH)/configs/properties/odm.prop
 TARGET_PRODUCT_PROP := $(DEVICE_PATH)/configs/properties/product.prop
