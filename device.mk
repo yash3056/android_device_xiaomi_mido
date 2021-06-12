@@ -23,6 +23,9 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-404
 
+# Board
+TARGET_BOARD_PLATFORM += msm8953
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
