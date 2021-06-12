@@ -45,6 +45,9 @@ TARGET_VENDOR_PROP := $(DEVICE_PATH)/vendor.prop
 #Gapps
 WITH_GAPPS := true
 
+# temp
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 # Kernel
 TARGET_KERNEL_CONFIG := mido_defconfig
 BOARD_KERNEL_BASE := 0x80000000
