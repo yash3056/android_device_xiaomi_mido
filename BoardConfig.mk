@@ -64,6 +64,8 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 #TARGET_KERNEL_CLANG_VERSION := proton
 #TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+PRODUCT_COPY_FILES += device/xiaomi/mido-kernel/Image.gz:kernel
+PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/mido-kernel/sdm625/kernel-headers
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
