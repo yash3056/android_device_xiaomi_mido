@@ -119,12 +119,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist
 TARGET_COPY_OUT_VENDOR := vendor
 
-# RIL
-ENABLE_VENDOR_RIL_SERVICE := true
-
-#Add non-hlos files to ota packages
-ADD_RADIO_FILES := true
-
 # FM
 BOARD_HAVE_QCOM_FM := true
 
