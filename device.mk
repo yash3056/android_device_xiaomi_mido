@@ -21,7 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/configs/overlays/overlay \
     $(LOCAL_PATH)/configs/overlays/overlay-pa \
-    $(LOCAL_PATH)/configs/overlays/overlay-system
+    $(LOCAL_PATH)/configs/overlays/overlay-system \
+	$(LOCAL_PATH)/configs/overlays/device/overlay
+
+PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/configs/overlays/product/overlay
 
 # Board Platform
 TARGET_BOARD_PLATFORM := msm8953
