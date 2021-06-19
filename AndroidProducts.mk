@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/p404_mido.mk
+    $(LOCAL_DIR)/cafex_mido.mk
 
 COMMON_LUNCH_CHOICES := \
-    p404_mido-user \
-    p404_mido-userdebug \
-    p404_mido-eng
+    cafex_mido-user \
+    cafex_mido-userdebug \
+    cafex_mido-eng
