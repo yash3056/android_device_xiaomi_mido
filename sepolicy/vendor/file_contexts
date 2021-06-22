@@ -1,9 +1,6 @@
 # Binaries
 /system/bin/chargeonlymode                      u:object_r:charger_exec:s0
 
-# Camera
-/data/vendor/qcam(/.*)?                         u:object_r:vendor_camera_data_file:s0
-
 # Fpc Fingerprint
 /data/fpc(/.*)?                                 u:object_r:fpc_data_file:s0
 /dev/socket/fpce(/.*)?                          u:object_r:fpce_socket:s0
@@ -24,21 +21,19 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_mido    u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi_mido                         u:object_r:hal_ir_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_mido                      u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.xiaomi_mido                  u:object_r:hal_lineage_livedisplay_qti_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi_mido                        u:object_r:hal_lineage_touch_default_exec:s0
 
 # Ir
 /dev/lirc[0-9]*					u:object_r:lirc_device:s0
 
 # Legacy root dirs
-/firmware(/.*)?                                 u:object_r:firmware_file:s0
 /persist(/.*)?                                  u:object_r:mnt_vendor_file:s0
+/bt_firmware                    u:object_r:rootfs:s0
+/dsp                    u:object_r:rootfs:s0
+/firmware                    u:object_r:rootfs:s0
 
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db			u:object_r:rild_file:s0
 
-# Sensors
-/(mnt/vendor)/persist/sensors(/.*)?                                     u:object_r:persist_sensors_file:s0
 
 # Sys files
 /sys/devices(/platform)?/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?          u:object_r:sysfs_leds:s0
