@@ -153,6 +153,7 @@ DISABLE_RILD_OEM_HOOK := true
 VENDOR_SECURITY_PATCH := 2021-02-05
 
 # SELinux
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Treble
