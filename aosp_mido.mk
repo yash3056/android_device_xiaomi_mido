@@ -14,15 +14,23 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
+# All components inherited here go to system imageC	
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system.mk)
+
+# All components inherited here go to system_ext image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# All components inherited here go to vendor image
+# TODO(b/136525499): move *_vendor.mk into the vendor makefile later
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
+
+PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
